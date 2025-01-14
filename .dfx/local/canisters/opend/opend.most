@@ -1,0 +1,17 @@
+// Version: 1.0.0
+type List<T> = ?(T, List<T>);
+type Listing = {itemOwner : Principal; itemPrice : Nat};
+type NFT =
+  actor {
+    getAsset : shared query () -> async [Nat8];
+    getCanisterId : shared query () -> async Principal;
+    getName : shared query () -> async Text;
+    getOwner : shared query () -> async Principal;
+    transferOwnership : shared Principal -> async Text
+  };
+type NFT__1 = NFT;
+actor {
+  stable var stableMapOfListings : [(Principal, Listing)];
+  stable var stableMapOfNFTs : [(Principal, NFT__1)];
+  stable var stableMapOfOwners : [(Principal, List<Principal>)]
+};
