@@ -6,6 +6,8 @@ A web3 application inspired by OpenSea which is a web3 marketplace for NFTs (Non
 -Can view sold and bought NFTs.
 -Persistence of owned NFTs is implemented across refreshes..
 
+Run the token project also simulataneously to sell and buy NFTs
+
 # To Install and Run the Project
 
 <!-- 2vxsx-fae -->
